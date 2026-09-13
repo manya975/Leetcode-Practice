@@ -1,0 +1,28 @@
+class Solution {
+    public int countMaxOverlap(int[][] a,int[][] b, int rowOffset,int colOffset){
+        int cnt=0;
+        for(int i =0;i<a.length;i++){
+            for(int j = 0;j<a.length;j++){
+                int i_new  = i+rowOffset;
+                int j_new = j+colOffset;
+                if(i_new < 0||i_new >= a.length || j_new < 0||j_new >= a.length)
+                    continue;
+                if(a[i][j] == 1 && b[i_new][j_new] == 1)
+                    cnt++;
+            }
+        }
+        return cnt;
+    }
+    public int largestOverlap(int[][] img1, int[][] img2) {
+        int maxOverlap=0;
+        int n = img1.length;
+        for(int i = -n+1; i < n; i++){
+            for(int j = -n+1; j< n;j++){
+                maxOverlap = Math.max(maxOverlap,countMaxOverlap(img1,img2,i,j));
+            }
+        }
+    return maxOverlap;
+    }
+}
+
+
