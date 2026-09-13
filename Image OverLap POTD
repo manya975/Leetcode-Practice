@@ -1,3 +1,14 @@
+# Intuition
+Since it was a matrix problem, we have to play with coordinates.
+
+# Approach
+
+See when we move img2 up/down/R/L relative to img1 we'll be checking only the overlap part not the outer parts but the coordinates for img2 will change as row offset---> -n+1 to n-1  and col offset also will go from ----> -n+1 to n-1 for img2.
+
+Now, they'll overlap only if img1[i][j] == img2[i+rowOffset][j+colOffset]  as the img2 will be shifted so coordinates adjusted accordingly. 
+
+At last, don't forget to check boundary condition for i+rowOffset , j+colOffset as  it'll go out due to shifting of rows/columns. We have only to check for overlapping so ignore the outer going part i.e. out of boundary cells/data dropped.
+ 
 class Solution {
     public int countMaxOverlap(int[][] a,int[][] b, int rowOffset,int colOffset){
         int cnt=0;
