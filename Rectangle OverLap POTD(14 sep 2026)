@@ -2,7 +2,7 @@ Intuition
 Since it involves overlapping, think about coordinates boundary
 
 Approach
-
+https://github.com/user-attachments/assets/6040fd4f-937e-4f96-aca4-7acdb776c742
 Check for the corners boundary conditions. That's all.
 
 Solution:
