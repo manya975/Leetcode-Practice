@@ -2,7 +2,7 @@
 Since it was a matrix problem, we have to play with coordinates.
 
 # Approach
-
+https://github.com/user-attachments/assets/44ce4217-0981-4352-bd3f-a69e3e9d5ac2
 See when we move img2 up/down/R/L relative to img1 we'll be checking only the overlap part not the outer parts but the coordinates for img2 will change as row offset---> -n+1 to n-1  and col offset also will go from ----> -n+1 to n-1 for img2.
 
 Now, they'll overlap only if img1[i][j] == img2[i+rowOffset][j+colOffset]  as the img2 will be shifted so coordinates adjusted accordingly. 
